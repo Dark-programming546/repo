@@ -1,0 +1,110 @@
+body {
+  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.contact-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(253,160,133,0.15);
+  padding: 36px 28px;
+  width: 350px;
+  max-width: 98vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h2 {
+  color: #fda085;
+  margin-bottom: 18px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+label {
+  font-weight: 500;
+  color: #fda085;
+  margin-bottom: 2px;
+}
+input, textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1.5px solid #f6d365;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  outline: none;
+  background: #fdf6f0;
+}
+input:focus, textarea:focus {
+  border-color: #fda085;
+  box-shadow: 0 2px 8px rgba(253,160,133,0.12);
+}
+.error-message {
+  color: #e74c3c;
+  font-size: 0.95rem;
+  margin-top: 2px;
+  min-height: 18px;
+  animation: shake 0.3s;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+button {
+  background: linear-gradient(90deg, #fda085 70%, #f6d365 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  padding: 12px 0;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(253,160,133,0.10);
+  transition: background 0.2s, transform 0.2s;
+}
+button:active {
+  background: #f6d365;
+  color: #fda085;
+  transform: scale(0.97);
+}
+.success-message {
+  color: #27ae60;
+  font-size: 1.1rem;
+  margin-top: 12px;
+  text-align: center;
+  animation: fadeIn 0.5s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@media (max-width: 500px) {
+  .contact-card {
+    padding: 18px 6px;
+    width: 99vw;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+  button {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+}
